@@ -1,6 +1,10 @@
 import React from 'react';
 
-export const Footer: React.FC = () => {
+interface FooterProps {
+  onOpenApiHealth?: () => void;
+}
+
+export const Footer: React.FC<FooterProps> = ({ onOpenApiHealth }) => {
   return (
     <footer className="w-full bg-[#f3f3fe] border-t border-[#e1e1ed] mt-12 shadow-[0_-1px_6px_rgba(0,0,0,0.03)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
@@ -9,13 +13,29 @@ export const Footer: React.FC = () => {
           <div className="space-y-2">
             <div className="flex items-center gap-2">
               <span className="h-2.5 w-2.5 rounded-full bg-[#00875a]"></span>
-              <span className="text-xs font-bold text-[#191b23]">
-                LTA DataMall API 2.0
-              </span>
+              <button
+                onClick={onOpenApiHealth}
+                className="text-xs font-bold text-[#191b23] hover:text-[#39126b] hover:underline flex items-center gap-1 cursor-pointer text-left"
+                title="Open API Health & Telemetry Status"
+              >
+                <span>LTA DataMall API 2.0 / v3</span>
+                <span className="material-symbols-outlined text-[13px] text-[#00875a]">
+                  vital_signs
+                </span>
+              </button>
             </div>
             <p className="text-xs text-[#4a4450] leading-relaxed">
-              Real-time transit telemetry streaming active. Synchronized with Singapore LTA Intelligent Transport Systems.
+              Real-time transit telemetry streaming active via LTA DataMall v3 BusArrival endpoint. Synchronized with Singapore LTA Intelligent Transport Systems.
             </p>
+            {onOpenApiHealth && (
+              <button
+                onClick={onOpenApiHealth}
+                className="text-[11px] text-[#39126b] font-semibold hover:underline inline-flex items-center gap-0.5 cursor-pointer mt-1"
+              >
+                <span>Monitor API Health (/api/health)</span>
+                <span className="material-symbols-outlined text-[12px]">arrow_forward</span>
+              </button>
+            )}
           </div>
 
           {/* Col 2: Occupancy Telemetry */}
