@@ -1,0 +1,6 @@
+{
+  "name": "SBS Transit Live Bus Tracker",
+  "description": "Real-time automated bus arrival telemetry, live GPS headway tracking, route sequences, and occupancy status across Singapore.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

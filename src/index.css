@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #39126b;
+  --color-primary-container: #502d82;
+  --color-on-primary: #ffffff;
+  --color-on-primary-container: #c09bf8;
+  --color-primary-fixed: #eddcff;
+  --color-primary-fixed-dim: #d7baff;
+  --color-on-primary-fixed: #280056;
+  --color-on-primary-fixed-variant: #573489;
+  
+  --color-secondary: #b51c00;
+  --color-secondary-container: #df2e0c;
+  --color-on-secondary: #ffffff;
+  --color-secondary-fixed: #ffdad3;
+  --color-secondary-fixed-dim: #ffb4a5;
+  --color-on-secondary-fixed: #3e0400;
+  --color-on-secondary-fixed-variant: #8e1400;
+  
+  --color-tertiary: #282552;
+  --color-tertiary-container: #3e3b6a;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-fixed: #e3dfff;
+  --color-tertiary-fixed-dim: #c5c1f8;
+  --color-on-tertiary-fixed: #181542;
+  --color-on-tertiary-fixed-variant: #444170;
+
+  --color-surface: #faf8ff;
+  --color-surface-bright: #faf8ff;
+  --color-surface-dim: #d9d9e4;
+  --color-surface-card: #ffffff;
+  --color-surface-subtle: #f6f7fa;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f3fe;
+  --color-surface-container: #ededf8;
+  --color-surface-container-high: #e7e7f3;
+  --color-surface-container-highest: #e1e1ed;
+  --color-surface-variant: #e1e1ed;
+  
+  --color-on-surface: #191b23;
+  --color-on-surface-variant: #4a4450;
+  --color-inverse-surface: #2e3039;
+  --color-inverse-on-surface: #f0f0fb;
+  --color-outline: #7b7481;
+  --color-outline-variant: #ccc3d2;
+  
+  --color-status-seats-available: #00875a;
+  --color-status-standing-available: #f58220;
+  --color-status-limited-standing: #d32f2f;
+  --color-occupancy-seats-bg: #e3fcef;
+  --color-occupancy-standing-bg: #fff0d6;
+  --color-occupancy-limited-bg: #ffebe6;
+  --color-border-subtle: #e4e7ed;
+  --color-border-focus: #502d82;
+
+  --font-display: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-route-badge: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-eta-countdown: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline-lg: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline-md: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-headline-sm: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --font-body-lg: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-md: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body-sm: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label-lg: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label-md: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-label-sm: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+.font-route-badge, .font-eta-countdown {
+  font-family: 'Space Grotesk', sans-serif;
+  font-feature-settings: "tnum" on;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-variation-settings: 'FILL' 0, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+}
+
+.material-symbols-outlined.fill-1 {
+  font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc3d2;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7b7481;
+}
